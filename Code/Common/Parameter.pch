@@ -1,0 +1,18 @@
+//
+//  Parameter.pch
+//  Demo
+//
+//  Created by ZZ on 2019/8/21.
+//  Copyright © 2019 SJW. All rights reserved.
+//
+
+#ifndef Parameter_pch
+#define Parameter_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define AMapKey @"72fa5c9c0d71e61c0063d63ac21b0d3b"
+
+#endif /* Parameter_pch */

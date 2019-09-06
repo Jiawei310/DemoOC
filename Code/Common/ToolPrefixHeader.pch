@@ -1,0 +1,68 @@
+//
+//  ToolPrefixHeader.pch
+//  Demo
+//
+//  Created by ZZ on 2019/8/16.
+//  Copyright © 2019 SJW. All rights reserved.
+//
+
+#ifndef ToolPrefixHeader_pch
+#define ToolPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/**
+ *  提示框
+ *  @param m 提示字段
+ *  @return nil
+ **/
+#define SHOWALERT(m,VC) \
+{\
+UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]; \
+UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:m preferredStyle:UIAlertControllerStyleAlert]; \
+[alertController addAction:cancelAction]; \
+[VC presentViewController:alertController animated:YES completion:nil]; \
+}\
+
+// weakSelf and strongSelf
+#define WeakSelf(weakSelf) __weak __typeof(&*self)weakSelf = self;
+#define strongSelf(strongSelf) __strong __typeof(&*self)strongSelf = self
+
+//NSLog 宏定义
+#ifdef DEBUG
+#define DELog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__,[[NString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define NSLog(format, ...)
+#endif
+
+//设置颜色RGB
+#define RGBCOLOR(r,g,b,_alpha) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:_alpha]
+#define XCOLOR(s,_alpha)     [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >> 16))/255.0 blue:(((s & 0xFF) >> 16))/255.0 alpha:_alpha]
+
+// 获取iOS版本信息
+#define DeviceIOSVersion ((float)[[[UIDevice currentDevice] systemVersion] floatValue])
+
+// 获取物理屏幕尺寸
+#define PhoneScreen_Height [UIScreen mainScreen].bounds.size.height
+#define PhoneScreen_Width [UIScreen mainScreen].bounds.size.width
+
+// SafeArea
+#define SafeAreaTopHeight (PhoneScreen_Height == 812.0 ? 88 : 64)
+#define SafeAreaBottomHeight (PhoneScreen_Height == 812.0 ? 34 : 0)
+
+// 隐藏键盘
+#define HiddenKeybory {    [[[UIApplication sharedApplication] keyWindow] endEditing:YES]    }
+
+/*
+ *  APP 基本信息
+ *  Version
+ *  Bundle ID
+ *  Name
+ */
+#define AppShortVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define AppBundleIdentifier [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
+#define AppDisplayName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
+
+
+#endif /* ToolPrefixHeader_pch */
