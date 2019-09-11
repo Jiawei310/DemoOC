@@ -14,6 +14,7 @@
 /**加载菊花**/
 @property (nonatomic,strong) MBProgressHUD *progressHUD;
 @property (nonatomic, strong) UIView *coverView;//遮罩
+@property (nonatomic, strong) UILabel *nodataLabel;//暂无数据显示
 
 @end
 
@@ -110,9 +111,31 @@
     [self.progressHUD showAnimated:YES];
 }
 
+#pragma mark - nodataView
+
+- (void)showNodataView {
+    [self.view addSubview:self.coverView];
+    [self.view addSubview:self.nodataLabel];
+    
+    self.coverView.hidden = NO;
+    self.nodataLabel.hidden = NO;
+}
+
+- (void)hideNoDataView {
+    self.coverView.hidden = YES;
+    self.nodataLabel.hidden = YES;
+    
+    [self.coverView removeFromSuperview];
+    [self.nodataLabel removeFromSuperview];
+}
+
+
 #pragma mark - coverView
 - (void)tapCoverViewAction:(UITapGestureRecognizer *)tap {
-    
+    //如果显示暂无数据，点击加载一次数据
+    if (self.nodataLabel.hidden == NO) {
+        [self loadNetworkData];
+    }
 }
 
 #pragma mark - set and get
@@ -137,6 +160,15 @@
         [_coverView addGestureRecognizer:tapG];
     }
     return _coverView;
+}
+
+- (UILabel *)nodataLabel {
+    if (!_nodataLabel) {
+        _nodataLabel = [[UILabel alloc] init];
+        _nodataLabel.frame = CGRectMake(0, 200, PhoneScreen_Width, 44);
+        _nodataLabel.text = @"暂无数据";
+    }
+    return _nodataLabel;
 }
 
 

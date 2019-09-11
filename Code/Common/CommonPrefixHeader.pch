@@ -16,5 +16,6 @@
 #define VC_BACKGROUND_COLOR [UIColor colorWithRed:(((0xf5f5f5 & 0xFF0000) >> 16))/255.0 green:(((0xf5f5f5 &0xFF00) >>8))/255.0 blue:((0xf5f5f5 &0xFF))/255.0 alpha:1.0]
 
 #define ON_LOADING @"正在加载..."
+#define PREFIX_NAME @""
 
 #endif /* CommonPrefixHeader_pch */
