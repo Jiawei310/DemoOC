@@ -24,10 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
-    
-    
-    
     [self.view addSubview:self.mapManager.mapView];
     
     self.mapManager.mapView.userTrackingMode = MAUserTrackingModeFollow;
@@ -169,7 +165,7 @@
 
 #pragma mark - MAMapViewDelegate
 - (void)mapViewRequireLocationAuth:(CLLocationManager *)locationManager {
-    
+    [locationManager requestAlwaysAuthorization];//弹出提示框
 }
 
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
