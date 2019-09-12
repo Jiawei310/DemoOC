@@ -28,6 +28,8 @@
 		8E573FA62314D5A900AF8BCF /* DemoMapNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E573FA52314D5A900AF8BCF /* DemoMapNaviViewController.m */; };
 		8E616BE323067FD700A0606D /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E616BE223067FD700A0606D /* BaseNavigationViewController.m */; };
 		8E77A8CD230D3013005DEC9F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E77A8CC230D3013005DEC9F /* MapKit.framework */; };
+		8E86BA402328863100BC0709 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E86BA3F2328863100BC0709 /* BaseTabBarController.m */; };
+		8E86BA43232886FB00BC0709 /* BaseTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E86BA42232886FB00BC0709 /* BaseTabBarItem.m */; };
 		8E9C1F772320FF5D0065652A /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C1F762320FF5D0065652A /* BaseTableViewController.m */; };
 		8E9C1F7A232103300065652A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C1F79232103300065652A /* BaseModel.m */; };
 		8E9C1F7E232103DD0065652A /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9C1F7D232103DD0065652A /* BaseView.m */; };
@@ -112,6 +114,10 @@
 		8E616BE823068E8A00A0606D /* CommonPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonPrefixHeader.pch; sourceTree = "<group>"; };
 		8E77A8CC230D3013005DEC9F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8E77A8CE230D36D1005DEC9F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8E86BA3E2328863100BC0709 /* BaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		8E86BA3F2328863100BC0709 /* BaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		8E86BA41232886FB00BC0709 /* BaseTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarItem.h; sourceTree = "<group>"; };
+		8E86BA42232886FB00BC0709 /* BaseTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarItem.m; sourceTree = "<group>"; };
 		8E9C1F752320FF5D0065652A /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		8E9C1F762320FF5D0065652A /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		8E9C1F78232103300065652A /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
@@ -261,6 +267,10 @@
 				8E233E98230CEA6B00A2ED93 /* BaseViewController.m */,
 				8E616BE123067FD700A0606D /* BaseNavigationViewController.h */,
 				8E616BE223067FD700A0606D /* BaseNavigationViewController.m */,
+				8E86BA3E2328863100BC0709 /* BaseTabBarController.h */,
+				8E86BA3F2328863100BC0709 /* BaseTabBarController.m */,
+				8E86BA41232886FB00BC0709 /* BaseTabBarItem.h */,
+				8E86BA42232886FB00BC0709 /* BaseTabBarItem.m */,
 				8E4A81922325FE5E00CB0E79 /* BaseShowImagesViewController.h */,
 				8E4A81932325FE5E00CB0E79 /* BaseShowImagesViewController.m */,
 			);
@@ -603,11 +613,13 @@
 				8E233E8F230CE79300A2ED93 /* MapManager.m in Sources */,
 				8E2060D1230E804A00EFE02A /* CustomAnnotationView.m in Sources */,
 				8E13A0C823137BB10098041B /* DemoMapLocationViewController.m in Sources */,
+				8E86BA402328863100BC0709 /* BaseTabBarController.m in Sources */,
 				8E233E93230CE8C600A2ED93 /* DemoMapViewController.m in Sources */,
 				8EBB9C6B2302BFD300DBBC10 /* NetModel.m in Sources */,
 				8E2A2C922321F2F100B7F603 /* BasePageViewController.m in Sources */,
 				8E2060CD230E77FB00EFE02A /* CustomCalloutView.m in Sources */,
 				8E9C1F772320FF5D0065652A /* BaseTableViewController.m in Sources */,
+				8E86BA43232886FB00BC0709 /* BaseTabBarItem.m in Sources */,
 				8E573FA62314D5A900AF8BCF /* DemoMapNaviViewController.m in Sources */,
 				8E1B55602316219800E650A4 /* DemoMapNaviCarViewController.m in Sources */,
 				8E546CF6230F92950038E2B6 /* DemoMapSearchViewController.m in Sources */,
