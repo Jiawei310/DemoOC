@@ -64,5 +64,8 @@ UIAlertController *alertController = [UIAlertController alertControllerWithTitle
 #define AppBundleIdentifier [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
 #define AppDisplayName [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"]
 
+#define TurnToUrl(url) {    NSURL *url = [NSURL URLWithString:url];\
+                            [[UIApplication sharedApplication] openURL:url];\
+                       }
 
 #endif /* ToolPrefixHeader_pch */
